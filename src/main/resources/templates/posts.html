@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting Started: Serving Web Content</title>
+</head>
+<body>
+<p th:text="'Калькулятор'"/>
+<form method="get" action="/gets">
+    <input type="number" name="first" id="first"/><br>
+    <select name="sym" id="sym">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select><br>
+    <input type="number" name="second" id="second"/><br>
+    <input  type="submit" value="Посчитать"/>
+</form>
+<p th:text="'Итог:'+ ${res} " />
+<form method="get" action="/">
+    <input  type="submit" value="Назад"/>
+</form>
+</body>
+</html>
